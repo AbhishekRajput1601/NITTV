@@ -3,8 +3,10 @@ const { Server } = require("socket.io");
 
 const app = express();
 
-const server = app.listen(process.env.PORT, () => {
-    console.log(`Server running on port 8080`);
+const PORT = process.env.PORT || 8080;
+
+const server = app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
 
 app.get("/", (req, response) => {
@@ -16,11 +18,6 @@ const io = new Server(server, {
         origin: [
             "https://nittv-gamma.vercel.app",
             "http://localhost:5173",
-            "https://manitv.vercel.app",
-            "https://manitv.live",
-            "https://nittv.vercel.app",
-            "https://nittv.live",
-            "https://nittvtest.vercel.app",
         ],
         methods: ["GET", "POST"],
     },

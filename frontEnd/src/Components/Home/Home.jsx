@@ -10,7 +10,6 @@ import {
   onAuthStateChanged,
   setPersistence,
   browserLocalPersistence,
-  updateProfile,
 } from 'firebase/auth';
 
 import { LogIn, LogOut } from 'lucide-react';
