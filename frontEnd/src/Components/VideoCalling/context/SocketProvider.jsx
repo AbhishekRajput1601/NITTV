@@ -15,8 +15,7 @@ let backEndLink = "localhost:8080";
 export default function SocketProvider(props) {
 
     const socket = useMemo(() => {
-        // return io(`wss://${backEndLink}`, {
-        return io(`http://localhost:8080`, {
+        return io(process.meta.env.VITE_BACK_END_LINK, {
             transports: ["websocket", "polling"],
             reconnection: true, // Enable reconnection
             reconnectionAttempts: 5, // Number of reconnection attempts
