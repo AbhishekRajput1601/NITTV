@@ -22,7 +22,7 @@ NIT TV is an Omegle-style video chat platform exclusively for NIT students. It a
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/ankitsingh2105/NIT-TV.git
+    git clone [https://github.com/AbhishekRajput1601/NITTV.git]
     ```
 
 2.  **Install dependencies:**
